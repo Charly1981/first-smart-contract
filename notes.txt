@@ -29,4 +29,19 @@ const instance = await Faucet.deployed()
 instance.addFunds({vallue: "200000000000", from: accounts[0]})
 instance.addFunds({vallue: "200000000000", from: accounts[1]})
 
+---------------
+getAllFunders()
+truffle migrate --reset
+const instance = await Faucet.deployed()
+instance.addFunds({value: "2", from: accounts[0]})
+instance.addFunds({value: "2", from: accounts[1]})
+instance.getAllFunders()
 
+getFunderAtIndex()
+truffle migrate --reset 
+truffle console
+const instance = await Faucet.deployed()
+instance.addFunds({value: "2", from: accounts[0]})
+instance.addFunds({value: "2", from: accounts[1]})
+instance.getFunderAtIndex(0)
+instancde.getFunderAtIndex(1)
