@@ -1,0 +1,24 @@
+0x6080604052348015600f57600080fd5b50604580601d6000396000f3fe
+
+60 80 60 40 52 34 80 15 60 0f 57 60 00 80 fd 5b 50 60 45 80 60 1d 60 00 39 60 00 f3 fe
+
+
+//STACK
+
+
+//MEMORY
+
+Memory[0x40] = 0x80 // Free memory pointer
+
+Memory[0x00] = code to copy
+
+COMANDOS
+--------
+
+truffle migrate --reset
+truffle console
+const instance = await Faucet.deployed()
+instance.addFunds({value:"2000000000000000000"})
+
+
+web3.eth.sendTransaction({from: accounts[0], to: "0x3becc9fcbb3cBA26B1e2c10F49Ff6CEA040F314A", data: "0xa26759cb", value: "3000000000000000000"})
