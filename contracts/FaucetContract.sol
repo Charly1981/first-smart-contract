@@ -18,13 +18,17 @@ contract Faucet {
 
     // web3.eth.sendTransaction({from: accounts[0], to: "0xab9CE60A361917a02D390263Bc42084D5E49f8C3", value: "10000000000000000000"})
 
+    address[] public funders;
+
     receive() external payable {}
 
-    function addFunds() external payable {}
-
-    function justTesting() external pure returns(uint) {
-        return 2+2;
+    function addFunds() external payable {
+        funders.push(msg.sender);
     }
+
+    // function justTesting() external pure returns(uint) {
+    //     return 2+2;
+    // }
 
 }
 
